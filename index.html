@@ -1,14 +1,14 @@
-/(repo root)
-  index.html
-  README.md   (optional)
-  /assets     (optional — images, css, js)
-<html lang="en" class="scroll-smooth"><head>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HI Studios | Global Game Development</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
         body { font-family: 'Inter', sans-serif; }
         /* Custom scrollbar for that sleek feel */
@@ -16,14 +16,15 @@
         ::-webkit-scrollbar-track { background: #000; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #555; }
-        
+
         /* Subtle grid background pattern */
         .bg-grid {
             background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         }
-        
+
         /* Custom Toggle Switch */
         .toggle-checkbox:checked {
             right: 0;
@@ -34,6 +35,7 @@
         }
     </style>
 </head>
+
 <body class="bg-black text-neutral-300 antialiased selection:bg-emerald-900 selection:text-white">
 
     <!-- Navigation -->
@@ -55,7 +57,7 @@
                     <span class="text-white text-xl font-semibold tracking-tight">HI Studios</span>
                 </a>
             </div>
-            
+
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
                 <a href="#services" class="hover:text-white transition-colors duration-200">Services</a>
                 <a href="#studio" class="hover:text-white transition-colors duration-200">Studio</a>
@@ -68,7 +70,7 @@
                     Start Project
                 </a>
                 <!-- Mobile Menu Icon -->
-                <button class="md:hidden text-white">
+                <button class="md:hidden text-white" aria-label="Open menu">
                     <span class="iconify" data-icon="lucide:menu" data-width="24" data-height="24"></span>
                 </button>
             </div>
@@ -89,12 +91,12 @@
                 </span>
                 Accepting new co-dev partners for 2026
             </div>
-            
+
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tighter mb-6 leading-[1.1]">
                 Crafting worlds.<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600">Scaling visions.</span>
             </h1>
-            
+
             <p class="max-w-2xl mx-auto text-lg md:text-xl text-neutral-400 mb-10 leading-relaxed">
                 HI Studios is a premier game development and art outsourcing agency bridging elite African talent with the global games industry. Operating from Lagos and Austin.
             </p>
@@ -193,17 +195,14 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative aspect-square md:aspect-video lg:aspect-square bg-black rounded-2xl border border-white/10 overflow-hidden group">
-                    <!-- Decorative Map Abstract -->
-                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&amp;w=2072&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-30 grayscale group-hover:grayscale-0 transition-all duration-700"></div>
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-30 grayscale group-hover:grayscale-0 transition-all duration-700"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-                    
-                    <!-- Location Pin 1: Lagos -->
+
                     <div class="absolute top-[55%] left-[52%] flex flex-col items-center group-hover:-translate-y-2 transition-transform duration-500">
                         <div class="h-3 w-3 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.8)]"></div>
                         <div class="mt-2 text-xs font-semibold text-white bg-black/80 px-2 py-1 rounded backdrop-blur border border-white/10">LAGOS</div>
                     </div>
 
-                    <!-- Location Pin 2: Austin -->
                     <div class="absolute top-[42%] left-[25%] flex flex-col items-center group-hover:-translate-y-2 transition-transform duration-500 delay-100">
                         <div class="h-3 w-3 bg-neutral-500 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.5)]"></div>
                         <div class="mt-2 text-xs font-semibold text-neutral-300 bg-black/80 px-2 py-1 rounded backdrop-blur border border-white/10">AUSTIN</div>
@@ -250,7 +249,7 @@
         </div>
     </section>
 
-    <!-- Custom Form / CTA Section -->
+    <!-- Custom Form / CTA Section (NETLIFY FORMS ENABLED) -->
     <section id="contact" class="py-24 relative overflow-hidden">
         <div class="max-w-xl mx-auto px-6 relative z-10">
             <div class="text-center mb-10">
@@ -258,31 +257,32 @@
                 <p class="text-neutral-400">Tell us about your project. We usually respond within 24 hours.</p>
             </div>
 
-            <form class="space-y-6">
+            <!-- Netlify Form -->
+            <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                <input type="hidden" name="form-name" value="contact">
+
                 <div class="grid grid-cols-2 gap-6">
                     <div class="space-y-2">
                         <label class="text-xs font-medium text-neutral-500 uppercase tracking-wider">Name</label>
-                        <input type="text" class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="Jane Doe">
+                        <input name="name" type="text" required class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="Jane Doe">
                     </div>
                     <div class="space-y-2">
                         <label class="text-xs font-medium text-neutral-500 uppercase tracking-wider">Email</label>
-                        <input type="email" class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="jane@studio.com">
+                        <input name="email" type="email" required class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="jane@studio.com">
                     </div>
                 </div>
 
-                <!-- Custom Range Slider (Project Budget estimate) -->
                 <div class="space-y-4 pt-4">
                     <div class="flex justify-between text-xs font-medium text-neutral-500 uppercase tracking-wider">
                         <label>Estimated Team Size</label>
                         <span id="team-val">5 Developers</span>
                     </div>
-                    <input type="range" min="1" max="50" value="5" class="w-full h-1 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white hover:accent-emerald-400 transition-colors">
+                    <input name="team_size" type="range" min="1" max="50" value="5" class="w-full h-1 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white hover:accent-emerald-400 transition-colors">
                 </div>
 
-                <!-- Custom Checkbox (NDA) -->
                 <div class="flex items-center gap-3 pt-2">
                     <div class="relative inline-block w-10 h-6 align-middle select-none transition duration-200 ease-in">
-                        <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-4 appearance-none cursor-pointer transition-all duration-300 top-1 left-1">
+                        <input name="need_nda" type="checkbox" id="toggle" class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-4 appearance-none cursor-pointer transition-all duration-300 top-1 left-1">
                         <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-neutral-800 cursor-pointer border border-neutral-700"></label>
                     </div>
                     <label for="toggle" class="text-sm text-neutral-400 cursor-pointer select-none">I need an NDA before sharing details</label>
@@ -290,17 +290,16 @@
 
                 <div class="space-y-2">
                     <label class="text-xs font-medium text-neutral-500 uppercase tracking-wider">Message</label>
-                    <textarea rows="4" class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="Tell us about your game..."></textarea>
+                    <textarea name="message" rows="4" required class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="Tell us about your game..."></textarea>
                 </div>
 
-                <button type="button" class="w-full bg-white text-black font-semibold h-12 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
+                <button type="submit" class="w-full bg-white text-black font-semibold h-12 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
                     Send Request
                     <span class="iconify" data-icon="lucide:arrow-right" data-width="16"></span>
                 </button>
             </form>
         </div>
-        
-        <!-- Background Gradient for Footer area -->
+
         <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-emerald-900/10 to-transparent pointer-events-none"></div>
     </section>
 
@@ -309,7 +308,6 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
                 <div class="col-span-2 md:col-span-1">
-                    <!-- Logo in Footer -->
                     <a href="#" class="group flex items-center gap-2 mb-6">
                         <svg viewBox="0 0 40 40" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="6" y="2" width="10" height="28" rx="2" class="fill-neutral-700 transition-colors duration-300 group-hover:fill-neutral-600"></rect>
@@ -322,14 +320,14 @@
                         HI Studios empowers creators worldwide with premium engineering and art resources rooted in African excellence.
                     </p>
                 </div>
-                
+
                 <div>
                     <h4 class="text-white text-sm font-medium mb-4">Company</h4>
                     <ul class="space-y-3 text-sm text-neutral-500">
                         <li><a href="#" class="hover:text-white transition-colors">About</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Careers</a> <span class="text-[10px] bg-emerald-900 text-emerald-400 px-1.5 py-0.5 rounded ml-1">Hiring</span></li>
                         <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
@@ -343,13 +341,46 @@
                     </ul>
                 </div>
 
+                <!-- Social (ICON-ONLY ROW) -->
                 <div>
                     <h4 class="text-white text-sm font-medium mb-4">Social</h4>
-                    <ul class="space-y-3 text-sm text-neutral-500">
-                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><span class="iconify" data-icon="lucide:linkedin" data-width="14"></span> LinkedIn</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><span class="iconify" data-icon="lucide:twitter" data-width="14"></span> Twitter / X</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors flex items-center gap-2"><span class="iconify" data-icon="lucide:instagram" data-width="14"></span> Instagram</a></li>
-                    </ul>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.linkedin.com/company/hi-studios"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-neutral-500 hover:text-white transition-colors"
+                           aria-label="HI Studios on LinkedIn">
+                            <span class="iconify" data-icon="mdi:linkedin" data-width="20"></span>
+                        </a>
+
+                        <a href="https://www.instagram.com/histudios"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-neutral-500 hover:text-white transition-colors"
+                           aria-label="HI Studios on Instagram">
+                            <span class="iconify" data-icon="mdi:instagram" data-width="20"></span>
+                        </a>
+
+                        <a href="https://www.facebook.com/histudios"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-neutral-500 hover:text-white transition-colors"
+                           aria-label="HI Studios on Facebook">
+                            <span class="iconify" data-icon="mdi:facebook" data-width="20"></span>
+                        </a>
+
+                        <a href="https://x.com/histudios"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-neutral-500 hover:text-white transition-colors"
+                           aria-label="HI Studios on X (Twitter)">
+                            <span class="iconify" data-icon="mdi:twitter" data-width="20"></span>
+                        </a>
+                    </div>
+
+                    <p class="mt-4 text-xs text-neutral-600">
+                        Follow us for updates, launches, and studio news.
+                    </p>
                 </div>
             </div>
 
@@ -362,16 +393,18 @@
             </div>
         </div>
     </footer>
-    
+
     <script>
-        // Simple script to update range slider value text
+        // Update range slider value text (and keep it consistent)
         const range = document.querySelector('input[type="range"]');
         const rangeVal = document.getElementById('team-val');
-        if(range && rangeVal) {
+
+        if (range && rangeVal) {
             range.addEventListener('input', (e) => {
                 rangeVal.textContent = `${e.target.value} Developer${e.target.value > 1 ? 's' : ''}`;
             });
         }
     </script>
 
-</body></html>
+</body>
+</html>
