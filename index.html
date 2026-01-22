@@ -1,410 +1,325 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HI Studios | Global Game Development</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- ✅ Primary SEO -->
+    <title>HI Studios (Hensen Interactive Studios) | Game Development & Interactive Media Studio</title>
+    <meta
+      name="description"
+      content="HI Studios (Hensen Interactive Studios) is a game development and interactive media studio building games, interactive experiences, and creative technology. Work-for-hire, co-development, and original IP."
+    />
+    <link rel="canonical" href="https://henseninteractivestudios.com/" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
 
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        /* Custom scrollbar for that sleek feel */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #555; }
+    <!-- ✅ Open Graph (social previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HI Studios (Hensen Interactive Studios)" />
+    <meta property="og:title" content="HI Studios (Hensen Interactive Studios) | Game Development & Interactive Media Studio" />
+    <meta
+      property="og:description"
+      content="We build games, interactive experiences, and creative tech. Work-for-hire, co-dev, and original IP."
+    />
+    <meta property="og:url" content="https://henseninteractivestudios.com/" />
+    <!-- Optional: add a real image path when you have it -->
+    <!-- <meta property="og:image" content="https://henseninteractivestudios.com/assets/uploads/og-cover.jpg" /> -->
 
-        /* Subtle grid background pattern */
-        .bg-grid {
-            background-size: 40px 40px;
-            background-image:
-                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        }
+    <!-- ✅ Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HI Studios (Hensen Interactive Studios)" />
+    <meta name="twitter:description" content="Game development & interactive media studio. Work-for-hire, co-dev, and original IP." />
 
-        /* Custom Toggle Switch */
-        .toggle-checkbox:checked {
-            right: 0;
-            border-color: #10b981;
-        }
-        .toggle-checkbox:checked + .toggle-label {
-            background-color: #10b981;
-        }
-    </style>
-</head>
+    <!-- ✅ Favicons (optional but recommended) -->
+    <!-- <link rel="icon" href="/assets/favicon.ico" /> -->
 
-<body class="bg-black text-neutral-300 antialiased selection:bg-emerald-900 selection:text-white">
-
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-black/70 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <!-- Logo -->
-                <a href="#" class="group flex items-center gap-3">
-                    <div class="relative flex h-9 w-9 items-center justify-center">
-                        <!-- Custom SVG Logo Construction -->
-                        <svg viewBox="0 0 40 40" class="h-9 w-9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Console Tower -->
-                            <rect x="6" y="2" width="10" height="28" rx="2" class="fill-neutral-700 transition-colors duration-300 group-hover:fill-neutral-600"></rect>
-                            <rect x="8" y="6" width="2" height="8" rx="1" class="fill-neutral-800/50"></rect>
-                            <!-- Gamepad Overlay -->
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 22C10 19.7909 11.7909 18 14 18H28C30.2091 18 32 19.7909 32 22V26C32 27.4854 31.1916 28.8028 29.9868 29.4682L28.8944 31.6528C28.4842 32.4732 27.4158 32.4732 27.0056 31.6528L25.9132 29.4682C25.5925 28.8267 24.9318 28.4162 24.2127 28.4001L17.8041 28.4001C17.0784 28.4164 16.4114 28.8317 16.0868 29.4809L14.9944 31.6655C14.5842 32.4859 13.5158 32.4859 13.1056 31.6655L12.0132 29.4809C10.7972 28.8093 10 27.4807 10 26V22ZM16 23C16.5523 23 17 23.4477 17 24V26H19C19.5523 26 20 26.4477 20 27C20 27.5523 19.5523 28 19 28H17V30C17 30.5523 16.5523 31 16 31C15.4477 31 15 30.5523 15 30V28H13C12.4477 28 12 27.5523 12 27C12 26.4477 12.4477 26 13 26H15V24C15 23.4477 15.4477 23 16 23ZM26 23C26.5523 23 27 23.4477 27 24C27 24.5523 26.5523 25 26 25C25.4477 25 25 24.5523 25 24C25 23.4477 25.4477 23 26 23ZM28 26C28.5523 26 29 26.4477 29 27C29 27.5523 28.5523 28 28 28C27.4477 28 27 27.5523 27 27C27 26.4477 27.4477 26 28 26Z" class="fill-white"></path>
-                        </svg>
-                    </div>
-                    <span class="text-white text-xl font-semibold tracking-tight">HI Studios</span>
-                </a>
-            </div>
-
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
-                <a href="#services" class="hover:text-white transition-colors duration-200">Services</a>
-                <a href="#studio" class="hover:text-white transition-colors duration-200">Studio</a>
-                <a href="#work" class="hover:text-white transition-colors duration-200">Our Work</a>
-                <a href="#locations" class="hover:text-white transition-colors duration-200">Locations</a>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <a href="#contact" class="hidden md:inline-flex h-8 items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 text-xs font-medium text-white transition-all hover:bg-white/10 hover:border-white/20">
-                    Start Project
-                </a>
-                <!-- Mobile Menu Icon -->
-                <button class="md:hidden text-white" aria-label="Open menu">
-                    <span class="iconify" data-icon="lucide:menu" data-width="24" data-height="24"></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <!-- Background Effects -->
-        <div class="absolute inset-0 bg-grid z-0 opacity-40"></div>
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-emerald-900/20 blur-[120px] rounded-full pointer-events-none"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-emerald-400 mb-8">
-                <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                Accepting new co-dev partners for 2026
-            </div>
-
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tighter mb-6 leading-[1.1]">
-                Crafting worlds.<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600">Scaling visions.</span>
-            </h1>
-
-            <p class="max-w-2xl mx-auto text-lg md:text-xl text-neutral-400 mb-10 leading-relaxed">
-                HI Studios is a premier game development and art outsourcing agency bridging elite African talent with the global games industry. Operating from Lagos and Austin.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button class="h-12 px-8 rounded-full bg-white text-black text-sm font-semibold hover:bg-neutral-200 transition-colors flex items-center gap-2">
-                    View Showreel
-                    <span class="iconify" data-icon="lucide:play" data-width="16"></span>
-                </button>
-                <button class="h-12 px-8 rounded-full border border-neutral-800 text-white text-sm font-medium hover:bg-white/5 transition-colors">
-                    Book a Consultation
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Tech Stack / Marquee -->
-    <section class="border-y border-white/5 bg-black/50 py-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="text-center text-xs text-neutral-500 uppercase tracking-widest mb-8">Powering next-gen experiences with</p>
-            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                <div class="flex items-center gap-2 text-white font-semibold tracking-tight"><span class="iconify" data-icon="lucide:box" data-width="24"></span> UNREAL ENGINE</div>
-                <div class="flex items-center gap-2 text-white font-semibold tracking-tight"><span class="iconify" data-icon="lucide:cuboid" data-width="24"></span> UNITY</div>
-                <div class="flex items-center gap-2 text-white font-semibold tracking-tight"><span class="iconify" data-icon="lucide:pen-tool" data-width="24"></span> BLENDER</div>
-                <div class="flex items-center gap-2 text-white font-semibold tracking-tight"><span class="iconify" data-icon="lucide:code-2" data-width="24"></span> C++</div>
-                <div class="flex items-center gap-2 text-white font-semibold tracking-tight"><span class="iconify" data-icon="lucide:cpu" data-width="24"></span> MAYA</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section id="services" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tighter mb-4">Our Expertise</h2>
-                    <p class="text-neutral-400 max-w-md">End-to-end development solutions tailored for AA and AAA studios.</p>
-                </div>
-                <a href="#" class="text-sm text-white border-b border-white/30 pb-0.5 hover:border-white transition-colors">View full capabilities</a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Service 1 -->
-                <div class="group relative p-8 rounded-2xl bg-neutral-900/20 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-neutral-900/40">
-                    <div class="h-10 w-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
-                        <span class="iconify" data-icon="lucide:palette" data-width="20"></span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3 tracking-tight">Art Production</h3>
-                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">
-                        From concept art to production-ready 3D assets. High-fidelity environments, character modeling, and rigging for next-gen consoles.
-                    </p>
-                    <ul class="space-y-2 text-xs text-neutral-500">
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> 3D Modeling &amp; Texturing</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Concept Art</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Animation &amp; VFX</li>
-                    </ul>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="group relative p-8 rounded-2xl bg-neutral-900/20 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-neutral-900/40">
-                    <div class="h-10 w-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
-                        <span class="iconify" data-icon="lucide:terminal" data-width="20"></span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3 tracking-tight">Engineering</h3>
-                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">
-                        Full-stack game engineering support. We integrate seamlessly into your repo, handling systems, gameplay, and backend infrastructure.
-                    </p>
-                    <ul class="space-y-2 text-xs text-neutral-500">
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Unity &amp; Unreal C++</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Porting &amp; Optimization</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Multiplayer Networking</li>
-                    </ul>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="group relative p-8 rounded-2xl bg-neutral-900/20 border border-white/5 hover:border-white/10 transition-all duration-300 hover:bg-neutral-900/40">
-                    <div class="h-10 w-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
-                        <span class="iconify" data-icon="lucide:users" data-width="20"></span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3 tracking-tight">Co-Development</h3>
-                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">
-                        Scale your team instantly. We act as a dedicated extension of your studio, adopting your pipelines, tools, and culture.
-                    </p>
-                    <ul class="space-y-2 text-xs text-neutral-500">
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Staff Augmentation</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> Live Ops Support</li>
-                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-600 rounded-full"></span> QA &amp; Testing</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Presence Section -->
-    <section id="locations" class="py-24 bg-neutral-900/20 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative aspect-square md:aspect-video lg:aspect-square bg-black rounded-2xl border border-white/10 overflow-hidden group">
-                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-30 grayscale group-hover:grayscale-0 transition-all duration-700"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-
-                    <div class="absolute top-[55%] left-[52%] flex flex-col items-center group-hover:-translate-y-2 transition-transform duration-500">
-                        <div class="h-3 w-3 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.8)]"></div>
-                        <div class="mt-2 text-xs font-semibold text-white bg-black/80 px-2 py-1 rounded backdrop-blur border border-white/10">LAGOS</div>
-                    </div>
-
-                    <div class="absolute top-[42%] left-[25%] flex flex-col items-center group-hover:-translate-y-2 transition-transform duration-500 delay-100">
-                        <div class="h-3 w-3 bg-neutral-500 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.5)]"></div>
-                        <div class="mt-2 text-xs font-semibold text-neutral-300 bg-black/80 px-2 py-1 rounded backdrop-blur border border-white/10">AUSTIN</div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="inline-flex items-center gap-2 text-xs font-semibold text-emerald-500 uppercase tracking-widest mb-6">
-                        <span class="iconify" data-icon="lucide:globe" data-width="14"></span> Global Operations
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tighter mb-6">
-                        Two Continents.<br>One Vision.
-                    </h2>
-                    <p class="text-neutral-400 text-lg mb-8 leading-relaxed">
-                        We combine the strategic presence in the United States with the exploding creative energy of Lagos, Nigeria. This hybrid model ensures 24-hour development cycles, competitive economics, and culturally diverse creativity.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-8">
-                        <div>
-                            <h4 class="text-white font-medium mb-1 flex items-center gap-2">
-                                <span class="iconify text-neutral-500" data-icon="lucide:map-pin" data-width="16"></span>
-                                Lagos HQ
-                            </h4>
-                            <p class="text-sm text-neutral-500">
-                                Production Hub<br>
-                                Victoria Island, Lagos<br>
-                                GMT+1
-                            </p>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-medium mb-1 flex items-center gap-2">
-                                <span class="iconify text-neutral-500" data-icon="lucide:map-pin" data-width="16"></span>
-                                US Office
-                            </h4>
-                            <p class="text-sm text-neutral-500">
-                                Client Relations &amp; Strategy<br>
-                                Austin, Texas<br>
-                                CST
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Custom Form / CTA Section (NETLIFY FORMS ENABLED) -->
-    <section id="contact" class="py-24 relative overflow-hidden">
-        <div class="max-w-xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-semibold text-white tracking-tighter mb-4">Start your journey with a HI</h2>
-                <p class="text-neutral-400">Tell us about your project. We usually respond within 24 hours.</p>
-            </div>
-
-            <!-- Netlify Form -->
-            <form name="contact" method="POST" data-netlify="true" class="space-y-6">
-                <input type="hidden" name="form-name" value="contact">
-
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-xs font-medium text-neutral-500 uppercase tracking-wider">Name</label>
-                        <input name="name" type="text" required class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="Jane Doe">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-xs font-medium text-neutral-500 uppercase tracking-wider">Email</label>
-                        <input name="email" type="email" required class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="jane@studio.com">
-                    </div>
-                </div>
-
-                <div class="space-y-4 pt-4">
-                    <div class="flex justify-between text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                        <label>Estimated Team Size</label>
-                        <span id="team-val">5 Developers</span>
-                    </div>
-                    <input name="team_size" type="range" min="1" max="50" value="5" class="w-full h-1 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white hover:accent-emerald-400 transition-colors">
-                </div>
-
-                <div class="flex items-center gap-3 pt-2">
-                    <div class="relative inline-block w-10 h-6 align-middle select-none transition duration-200 ease-in">
-                        <input name="need_nda" type="checkbox" id="toggle" class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-4 appearance-none cursor-pointer transition-all duration-300 top-1 left-1">
-                        <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-neutral-800 cursor-pointer border border-neutral-700"></label>
-                    </div>
-                    <label for="toggle" class="text-sm text-neutral-400 cursor-pointer select-none">I need an NDA before sharing details</label>
-                </div>
-
-                <div class="space-y-2">
-                    <label class="text-xs font-medium text-neutral-500 uppercase tracking-wider">Message</label>
-                    <textarea name="message" rows="4" required class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all placeholder:text-neutral-700" placeholder="Tell us about your game..."></textarea>
-                </div>
-
-                <button type="submit" class="w-full bg-white text-black font-semibold h-12 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
-                    Send Request
-                    <span class="iconify" data-icon="lucide:arrow-right" data-width="16"></span>
-                </button>
-            </form>
-        </div>
-
-        <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-emerald-900/10 to-transparent pointer-events-none"></div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-white/10 bg-black pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
-                <div class="col-span-2 md:col-span-1">
-                    <a href="#" class="group flex items-center gap-2 mb-6">
-                        <svg viewBox="0 0 40 40" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="6" y="2" width="10" height="28" rx="2" class="fill-neutral-700 transition-colors duration-300 group-hover:fill-neutral-600"></rect>
-                            <rect x="8" y="6" width="2" height="8" rx="1" class="fill-neutral-800/50"></rect>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 22C10 19.7909 11.7909 18 14 18H28C30.2091 18 32 19.7909 32 22V26C32 27.4854 31.1916 28.8028 29.9868 29.4682L28.8944 31.6528C28.4842 32.4732 27.4158 32.4732 27.0056 31.6528L25.9132 29.4682C25.5925 28.8267 24.9318 28.4162 24.2127 28.4001L17.8041 28.4001C17.0784 28.4164 16.4114 28.8317 16.0868 29.4809L14.9944 31.6655C14.5842 32.4859 13.5158 32.4859 13.1056 31.6655L12.0132 29.4809C10.7972 28.8093 10 27.4807 10 26V22ZM16 23C16.5523 23 17 23.4477 17 24V26H19C19.5523 26 20 26.4477 20 27C20 27.5523 19.5523 28 19 28H17V30C17 30.5523 16.5523 31 16 31C15.4477 31 15 30.5523 15 30V28H13C12.4477 28 12 27.5523 12 27C12 26.4477 12.4477 26 13 26H15V24C15 23.4477 15.4477 23 16 23ZM26 23C26.5523 23 27 23.4477 27 24C27 24.5523 26.5523 25 26 25C25.4477 25 25 24.5523 25 24C25 23.4477 25.4477 23 26 23ZM28 26C28.5523 26 29 26.4477 29 27C29 27.5523 28.5523 28 28 28C27.4477 28 27 27.5523 27 27C27 26.4477 27.4477 26 28 26Z" class="fill-white"></path>
-                        </svg>
-                        <span class="text-white text-lg font-semibold tracking-tight">HI Studios</span>
-                    </a>
-                    <p class="text-xs text-neutral-500 leading-relaxed max-w-xs">
-                        HI Studios empowers creators worldwide with premium engineering and art resources rooted in African excellence.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="text-white text-sm font-medium mb-4">Company</h4>
-                    <ul class="space-y-3 text-sm text-neutral-500">
-                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a> <span class="text-[10px] bg-emerald-900 text-emerald-400 px-1.5 py-0.5 rounded ml-1">Hiring</span></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white text-sm font-medium mb-4">Services</h4>
-                    <ul class="space-y-3 text-sm text-neutral-500">
-                        <li><a href="#" class="hover:text-white transition-colors">3D Art &amp; Animation</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Game Engineering</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Level Design</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Porting</a></li>
-                    </ul>
-                </div>
-
-                <!-- Social (ICON-ONLY ROW) -->
-                <div>
-                    <h4 class="text-white text-sm font-medium mb-4">Social</h4>
-                    <div class="flex items-center gap-6">
-                        <a href="https://www.linkedin.com/company/hensen-interactive-studios/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="text-neutral-500 hover:text-white transition-colors"
-                           aria-label="HI Studios on LinkedIn">
-                            <span class="iconify" data-icon="mdi:linkedin" data-width="20"></span>
-                        </a>
-
-                        <a href="https://www.instagram.com/say_histudios"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="text-neutral-500 hover:text-white transition-colors"
-                           aria-label="HI Studios on Instagram">
-                            <span class="iconify" data-icon="mdi:instagram" data-width="20"></span>
-                        </a>
-
-                        <a href="https://web.facebook.com/profile.php?id=61586455389752"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="text-neutral-500 hover:text-white transition-colors"
-                           aria-label="HI Studios on Facebook">
-                            <span class="iconify" data-icon="mdi:facebook" data-width="20"></span>
-                        </a>
-
-                        <a href="https://x.com/sayhistudios"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="text-neutral-500 hover:text-white transition-colors"
-                           aria-label="HI Studios on X (Twitter)">
-                            <span class="iconify" data-icon="mdi:twitter" data-width="20"></span>
-                        </a>
-                    </div>
-
-                    <p class="mt-4 text-xs text-neutral-600">
-                        Follow us for updates, launches, and studio news.
-                    </p>
-                </div>
-            </div>
-
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="text-xs text-neutral-600">© 2024 HI Studios Ltd. All rights reserved.</p>
-                <div class="flex items-center gap-6 text-xs text-neutral-600">
-                    <a href="#" class="hover:text-neutral-400">Privacy Policy</a>
-                    <a href="#" class="hover:text-neutral-400">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Update range slider value text (and keep it consistent)
-        const range = document.querySelector('input[type="range"]');
-        const rangeVal = document.getElementById('team-val');
-
-        if (range && rangeVal) {
-            range.addEventListener('input', (e) => {
-                rangeVal.textContent = `${e.target.value} Developer${e.target.value > 1 ? 's' : ''}`;
-            });
-        }
+    <!-- ✅ JSON-LD structured data (helps Google understand the brand + name mapping) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://henseninteractivestudios.com/#org",
+            "name": "Hensen Interactive Studios",
+            "alternateName": ["HI Studios", "HI-Studios"],
+            "url": "https://henseninteractivestudios.com/",
+            "description": "HI Studios (Hensen Interactive Studios) is a game development and interactive media studio building games, interactive experiences, and creative technology.",
+            "sameAs": [
+              "https://github.com/chimangerem-ctrl"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://henseninteractivestudios.com/#website",
+            "url": "https://henseninteractivestudios.com/",
+            "name": "HI Studios (Hensen Interactive Studios)",
+            "publisher": { "@id": "https://henseninteractivestudios.com/#org" },
+            "inLanguage": "en",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://henseninteractivestudios.com/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://henseninteractivestudios.com/#home",
+            "url": "https://henseninteractivestudios.com/",
+            "name": "HI Studios (Hensen Interactive Studios) | Game Development & Interactive Media Studio",
+            "isPartOf": { "@id": "https://henseninteractivestudios.com/#website" },
+            "about": { "@id": "https://henseninteractivestudios.com/#org" },
+            "inLanguage": "en"
+          }
+        ]
+      }
     </script>
 
-</body>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #050807;
+        --card: rgba(255,255,255,0.06);
+        --text: rgba(255,255,255,0.92);
+        --muted: rgba(255,255,255,0.72);
+        --line: rgba(255,255,255,0.10);
+        --accent: #77ffb2;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(1200px 600px at 20% 10%, rgba(119,255,178,0.12), transparent 60%),
+                    radial-gradient(900px 400px at 80% 0%, rgba(119,255,178,0.08), transparent 55%),
+                    var(--bg);
+        color: var(--text);
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 28px 18px 80px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 12px 0 22px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: linear-gradient(145deg, rgba(119,255,178,0.35), rgba(119,255,178,0.05));
+        border: 1px solid var(--line);
+      }
+      .brand b { letter-spacing: 0.2px; }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 14px;
+        font-size: 14px;
+      }
+      nav a:hover { color: var(--text); }
+
+      .hero {
+        margin-top: 18px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      }
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        padding: 7px 10px;
+        border-radius: 999px;
+      }
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 20px rgba(119,255,178,0.6);
+      }
+      h1 {
+        margin: 18px 0 10px;
+        line-height: 1.05;
+        font-size: clamp(32px, 4vw, 56px);
+        letter-spacing: -0.6px;
+      }
+      .sub {
+        max-width: 780px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 0 18px;
+      }
+      .ctaRow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 11px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--text);
+        background: rgba(255,255,255,0.05);
+      }
+      .btnPrimary {
+        border-color: rgba(119,255,178,0.35);
+        background: rgba(119,255,178,0.14);
+      }
+      .btn:hover { filter: brightness(1.08); }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+        margin-top: 16px;
+      }
+      .card {
+        grid-column: span 6;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(255,255,255,0.04);
+      }
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+        font-size: 14px;
+      }
+      footer {
+        margin-top: 28px;
+        color: rgba(255,255,255,0.58);
+        font-size: 13px;
+      }
+      @media (max-width: 840px) {
+        .card { grid-column: span 12; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand" aria-label="HI Studios (Hensen Interactive Studios)">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <b>HI Studios</b>
+            <div style="font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 2px;">
+              Hensen Interactive Studios
+            </div>
+          </div>
+        </div>
+
+        <nav aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <!-- ✅ HERO (rewritten for maximum Google relevance) -->
+      <section class="hero" id="top">
+        <div class="kicker">
+          <span class="dot" aria-hidden="true"></span>
+          Game Development • Co-Development • Interactive Media
+        </div>
+
+        <!-- IMPORTANT: H1 includes the exact search term and the full brand name -->
+        <h1>HI Studios (Hensen Interactive Studios)</h1>
+
+        <!-- This paragraph reinforces brand, category, and keywords in natural language -->
+        <p class="sub">
+          HI Studios, also known as <strong>Hensen Interactive Studios</strong>, is a <strong>game development</strong> and
+          <strong>interactive media studio</strong> building original IP and supporting partners with
+          <strong>work-for-hire</strong> and <strong>co-development</strong>. We deliver production-ready pipelines across
+          design, art, audio, engineering, and live content for games and interactive experiences.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#contact">Work with HI Studios</a>
+          <a class="btn" href="#work">See Projects & Media</a>
+          <a class="btn" href="https://github.com/chimangerem-ctrl" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+
+      <section class="grid" id="services" aria-label="Services">
+        <div class="card">
+          <h2>Game Development & Co-Development</h2>
+          <p>
+            End-to-end development support: prototyping, production, content integration, optimization, and shipping.
+            Built for studios, publishers, and teams needing reliable execution.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Interactive Media & Creative Technology</h2>
+          <p>
+            Interactive experiences, real-time content, and creative tech solutions—ideal for brands, events,
+            and digital products that need high-quality interactivity.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Work-for-Hire Production</h2>
+          <p>
+            Structured delivery with milestones, clear communication, and dependable timelines—art, audio, design,
+            engineering, QA coordination, and production management.
+          </p>
+        </div>
+        <div class="card" id="work">
+          <h2>Projects, Media & Updates</h2>
+          <p>
+            Publish images and videos in your Media Center (GitHub-hosted assets + content/media.json). YouTube links
+            auto-render with thumbnails for clean previews.
+          </p>
+        </div>
+      </section>
+
+      <section class="hero" id="contact" style="margin-top: 16px;">
+        <h2 style="margin: 0 0 10px; font-size: 20px;">Contact HI Studios</h2>
+        <p class="sub" style="margin-bottom: 0;">
+          For partnerships, co-development, or production support, email:
+          <strong>contact@henseninteractivestudios.com</strong>
+          <br />
+          <span style="color: rgba(255,255,255,0.62); font-size: 13px;">
+            Tip: add this email once you’re ready—Google also uses consistent contact info as a trust signal.
+          </span>
+        </p>
+      </section>
+
+      <footer>
+        © <span id="y"></span> HI Studios (Hensen Interactive Studios). All rights reserved.
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
